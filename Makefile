@@ -30,7 +30,7 @@ OBJS := \
 
 
 $(EXEC): $(OBJS)
-	$(CC) -o $@ $^ $(LDFLAGS)
+	gcc-5 -no-pie -o $@ $^ $(LDFLAGS)
 
 main.o: use-models.h
 use-models.h: models.inc Makefile
